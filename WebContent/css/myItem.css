@@ -1,0 +1,66 @@
+@CHARSET "ISO-8859-1";
+
+
+table.pageme tr.topPair{
+	padding-top: 5px;
+
+}
+
+table.pageme tr.bottomPair td{
+	padding-bottom: 5px;
+}
+
+table.pageme tr td{
+	padding-right: 5px;
+}
+
+
+table.pageme tr td img{
+	display: inline;
+}
+
+p.desc{
+	text-align: left;
+	font-size: 13px;	
+}
+p.title{
+	margin: 3px;
+	font-size: 20px;	
+}
+
+.listImg{
+	padding-left: 5px;
+	width: 130px;
+}
+
+.listDel{
+	width: 140px;
+	padding-left: 0px;	
+}
+
+.listDesc{
+	width:550px;
+	vertical-align:top;
+	font-size: 14px;
+}
+
+.fixMyItemTheirItemBreak{
+	width: 1000px;	
+}
+
+#fixMyItemTheirItemBreak tbody tr td{
+	vertical-align: top;
+}
+textarea.itemDesc {
+	border: 0px;
+	color: #000;
+	font-family: Helvetica, Verdana, Georgia, sans-serif;
+}
+
+textarea.selectedDesc {
+	border: solid thin #000;
+	background-color: #FFF;
+	font-family: Helvetica, Verdana, Georgia, sans-serif;
+}
+
+

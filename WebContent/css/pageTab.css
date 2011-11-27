@@ -1,0 +1,36 @@
+@CHARSET "ISO-8859-1";
+
+div.noresults{
+	width:800px;
+	border: #999 solid thin;
+	text-align:center;
+}
+
+.listEven {
+	height: 25px;
+	background-color:#c0e0c0;
+}
+
+.listOdd {
+	height: 25px;
+	background-color:#a0c080;
+}
+
+.listOdd:hover{
+	background-color:#80a080;	
+}
+
+.listEven:hover{
+	background-color:#80a080;	
+}
+
+.listDeactivated{
+	height: 25px;
+	background-color: #CCCCCC;
+}
+
+tbody.fullBody{
+	width: 100%;
+}
+
+
