@@ -106,7 +106,7 @@ public class SearchBean implements java.io.Serializable{
 		System.out.println("RemAddr: " + request.getRemoteAddr());
 		System.out.println("RemHost: " + request.getRemoteHost() );
 		String ipAddress = request.getRemoteAddr();
-		location = db.getLocationByIp("24.68.70.242");
+		location = null;//db.getLocationByIp("24.68.70.242");
 		if (location == null){
 			int [] tempLoc = {-1,-1,-1,-1};
 			location = tempLoc;

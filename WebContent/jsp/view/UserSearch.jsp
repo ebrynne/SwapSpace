@@ -10,9 +10,9 @@
 	<link rel="stylesheet" type="text/css" href="css/genericStyles.css"></link>
 	<link rel="stylesheet" type="text/css" href="css/ui.all.css"></link>
 	<link rel="stylesheet" type="text/css" href="css/myItem.css"></link>
-	<script src="/jquery.js" type="text/javascript"></script>
-	<script src="/effects.core.js" type="text/javascript"></script>
-	<script src="/ui.core.js" type="text/javascript"></script>
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<script src="js/effects.core.js" type="text/javascript"></script>
+	<script src="js/ui.core.js" type="text/javascript"></script>
 	<jsp:useBean id="searchBean" scope="session" class="ss.beans.SearchBean"></jsp:useBean>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<title>Search Swap Space - Users</title>

@@ -20,15 +20,15 @@
 	<link rel="stylesheet" type="text/css" href="css/pageTab.css"></link>
 	<link rel="stylesheet" type="text/css" href="css/jquery.rating.css"></link>
 	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css"></link>
-	<script src="/jquery.js" type="text/javascript"></script>
-	<script src="/effects.core.js" type="text/javascript"></script>
-	<script src="/ui.core.js" type="text/javascript"></script>
-	<script src="/quickpagerdiv.jquery.js" type="text/javascript"></script>
-	<script src="/ui.tabs.js" type="text/javascript"></script>
-	<script src="/ajaxupload.js" type="text/javascript"></script>
-	<script src="/jquery.MetaData.js" type="text/javascript" language="javascript"></script>
- 	<script src="/jquery.rating.js" type="text/javascript" language="javascript"></script>
- 	<script src="/jquery.rating.pack.js" type="text/javascript"></script>
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<script src="js/effects.core.js" type="text/javascript"></script>
+	<script src="js/ui.core.js" type="text/javascript"></script>
+	<script src="js/quickpagerdiv.jquery.js" type="text/javascript"></script>
+	<script src="js/ui.tabs.js" type="text/javascript"></script>
+	<script src="js/ajaxupload.js" type="text/javascript"></script>
+	<script src="js/jquery.MetaData.js" type="text/javascript" language="javascript"></script>
+ 	<script src="js/jquery.rating.js" type="text/javascript" language="javascript"></script>
+ 	<script src="js/jquery.rating.pack.js" type="text/javascript"></script>
  	<script type="text/javascript">
  		function tabNums(){
 			num = $("#currentSwaps").children().children().children(".new").size();

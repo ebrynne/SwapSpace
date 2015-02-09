@@ -5,8 +5,8 @@
 <head>
 <jsp:useBean id="resources" scope="application" class="ss.beans.ResourceBean" /> 
 <link rel="stylesheet" type="text/css" href="css/genericStyles.css"></link>
-<script src="/jquery.js" type="text/javascript"></script>
-<script src="/effects.core.js" type="text/javascript"></script>	
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/effects.core.js" type="text/javascript"></script>	
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Contact SwapSpace</title>
 </head>

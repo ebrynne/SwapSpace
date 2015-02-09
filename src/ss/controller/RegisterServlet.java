@@ -17,6 +17,8 @@ import ss.dao.DbDao;
  */
 public class RegisterServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	private static final String JSP_ROOT = "jsp/view/";
+
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -43,11 +45,11 @@ public class RegisterServlet extends HttpServlet {
 			request.setAttribute("dirtySwaps", dao.numDirtySwaps(user.getId()));
 			request.setAttribute("dirtyMess", dao.numDirtyMess(user.getId()));
 		}
-		if(dao.registerUser(StringEscapeUtils.escapeXml(request.getParameter("username")),request.getParameter("password"), request.getParameter("email"), StringEscapeUtils.escapeXml(request.getParameter("location")))){
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp?reg");
+		if(dao.registerUser(StringEscapeUtils.escapeXml(request.getParameter("username")),request.getParameter("password"), request.getParameter("email"), "Nelson")){
+			RequestDispatcher dispatcher = request.getRequestDispatcher(JSP_ROOT + "/index.jsp?reg");
 			dispatcher.forward( request, response);
 		}else{
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/Register.jsp?registerError=true");
+			RequestDispatcher dispatcher = request.getRequestDispatcher(JSP_ROOT + "/Register.jsp?registerError=true");
 			dispatcher.forward( request, response);
 		}	
 	}

@@ -9,13 +9,13 @@
 	<link rel="stylesheet" type="text/css" href="css/pageTab.css"></link>
 	<link rel="stylesheet" type="text/css" href="css/jquery.rating.css"></link>
 	<link rel="stylesheet" type="text/css" href="css/genericStyles.css"></link>
-	<script src="/jquery.js" type="text/javascript"></script>
-	<script src="/effects.core.js" type="text/javascript"></script>
-	<script src="/ui.core.js" type="text/javascript"></script>
-	<script src="/commonFunctions.js" type="text/javascript"></script>
-	<script src="/quickpagertable.jquery.js" type="text/javascript"></script>
-		<script src="/jquery.MetaData.js" type="text/javascript" language="javascript"></script>
-	<script src="/jquery.rating.js" type="text/javascript" language="javascript"></script>
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<script src="js/effects.core.js" type="text/javascript"></script>
+	<script src="js/ui.core.js" type="text/javascript"></script>
+	<script src="js/commonFunctions.js" type="text/javascript"></script>
+	<script src="js/quickpagertable.jquery.js" type="text/javascript"></script>
+	<script src="js/jquery.MetaData.js" type="text/javascript" language="javascript"></script>
+	<script src="js/jquery.rating.js" type="text/javascript" language="javascript"></script>
 	<script type="text/javascript">
 	
 	$(document).ready(function(){

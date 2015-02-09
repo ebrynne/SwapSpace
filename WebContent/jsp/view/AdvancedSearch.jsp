@@ -8,8 +8,8 @@
 <jsp:useBean id="resources" scope="application" class="ss.beans.ResourceBean" /> 
 <jsp:useBean id="searchBean" scope="session" class="ss.beans.SearchBean"></jsp:useBean>
 <link rel="stylesheet" type="text/css" href="css/genericStyles.css"></link>
-<script src="/jquery.js" type="text/javascript"></script>
-<script src="/effects.core.js" type="text/javascript"></script>	
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/effects.core.js" type="text/javascript"></script>	
 <title>Advanced Search</title>
 <script type="text/javascript">
 	function showHideCategory(){

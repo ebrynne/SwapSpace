@@ -39,15 +39,17 @@ import ss.dao.DbDao;
  */
 public class UserServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    private static final String ACCOUNT_JSP = "/AccountSettings.jsp";
-    private static final String HOME_JSP = "/index.jsp";
-    private static final String MY_ITEMS_JSP = "/MyItems.jsp";
-    private static final String MY_SWAPS_JSP = "/MySwaps.jsp";
-    private static final String COUNTER_JSP = "/CounterOffer.jsp";
-    private static final String ERROR_JSP = "/Error.jsp";
-    private static final String CONVERSATIONS_JSP = "/Conversations.jsp";
-    private static final String MESSAGES_JSP = "/Messages.jsp";
-    private static final String REVIEW_JSP = "/ReviewUser.jsp";
+	private static final String JSP_ROOT = "jsp/view/";
+
+    private static final String ACCOUNT_JSP = JSP_ROOT + "/AccountSettings.jsp";
+    private static final String HOME_JSP = JSP_ROOT + "/index.jsp";
+    private static final String MY_ITEMS_JSP = JSP_ROOT + "/MyItems.jsp";
+    private static final String MY_SWAPS_JSP = JSP_ROOT + "/MySwaps.jsp";
+    private static final String COUNTER_JSP = JSP_ROOT + "/CounterOffer.jsp";
+    private static final String ERROR_JSP = JSP_ROOT + "/Error.jsp";
+    private static final String CONVERSATIONS_JSP = JSP_ROOT +  "/Conversations.jsp";
+    private static final String MESSAGES_JSP = JSP_ROOT + "/Messages.jsp";
+    private static final String REVIEW_JSP = JSP_ROOT + "/ReviewUser.jsp";
     
     
     /**

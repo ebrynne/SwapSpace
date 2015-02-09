@@ -17,13 +17,14 @@ import ss.dao.DbDao;
  */
 public class Controller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static String REGISTER_JSP = "/Register.jsp";
-	private static String HOME_JSP = "/index.jsp";
-	private static String RSS_JSP = "/rss.jsp";
-	private static String ADVANCED_SEARCH_JSP = "/AdvancedSearch.jsp";
-	private final String FAQS_JSP = "/faqs.jsp";
-	private final String CONTACT_JSP = "/contactUs.jsp";
-	private final String HELP_JSP = "/help.jsp";
+	private static String JSP_ROOT = "jsp/view/";
+	private static String REGISTER_JSP = JSP_ROOT + "/Register.jsp";
+	private static String HOME_JSP = JSP_ROOT + "/index.jsp";
+	private static String RSS_JSP = JSP_ROOT + "/rss.jsp";
+	private static String ADVANCED_SEARCH_JSP = JSP_ROOT + "/AdvancedSearch.jsp";
+	private final String FAQS_JSP = JSP_ROOT + "/faqs.jsp";
+	private final String CONTACT_JSP = JSP_ROOT + "/contactUs.jsp";
+	private final String HELP_JSP = JSP_ROOT + "/help.jsp";
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String forward="";

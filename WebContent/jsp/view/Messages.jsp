@@ -8,12 +8,12 @@
 	<link rel="stylesheet" type="text/css" href="css/genericStyles.css"></link>
 	<link rel="stylesheet" type="text/css" href="css/ui.all.css"></link>
 	<link rel="stylesheet" type="text/css" href="css/dropdown.css"></link>
-	<script src="/jquery.js" type="text/javascript"></script>
-	<script src="/acdropdown.js" type="text/javascript"></script>
-	<script src="/modomt.js" type="text/javascript"></script>
-	<script src="/getobject2.js" type="text/javascript"></script>
-	<script src="/effects.core.js" type="text/javascript"></script>
-	<script src="/ui.core.js" type="text/javascript"></script>
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<script src="js/acdropdown.js" type="text/javascript"></script>
+	<script src="js/modomt.js" type="text/javascript"></script>
+	<script src="js/getobject2.js" type="text/javascript"></script>
+	<script src="js/effects.core.js" type="text/javascript"></script>
+	<script src="js/ui.core.js" type="text/javascript"></script>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<%
 	if(session.getAttribute("user") == null){ response.sendRedirect("/Controller?pageRequest=home");} else{ 

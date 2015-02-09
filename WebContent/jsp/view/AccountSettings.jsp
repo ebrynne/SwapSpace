@@ -14,14 +14,17 @@
 	<link rel="stylesheet" type="text/css" href="css/ui.all.css"></link>
 	<link rel="stylesheet" type="text/css" href="css/pageTab.css"></link>
 	<link rel="stylesheet" type="text/css" href="css/jquery.rating.css"></link>
-	<script src="/jquery.js" type="text/javascript"></script>
-	<script src="/effects.core.js" type="text/javascript"></script>
-	<script src="/ui.core.js" type="text/javascript"></script>
-	<script src="/quickpagertable.jquery.js" type="text/javascript"></script>
-	<script src="/ui.tabs.js" type="text/javascript"></script>
-	<script src="/ajaxupload.js" type="text/javascript"></script>
-	<script src="/jquery.MetaData.js" type="text/javascript" language="javascript"></script>
- 	<script src="/jquery.rating.js" type="text/javascript" language="javascript"></script>
+	<!-- <script src="js/jquery.js" type="text/javascript"></script>-->
+	<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+	<!-- <script src="js/effects.core.js" type="text/javascript"></script> -->
+	<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>	
+	<!--  <script src="js/ui.core.js" type="text/javascript"></script> -->
+	<!-- <script src="js/quickpagertable.jquery.js" type="text/javascript"></script>
+	<script src="js/ui.tabs.js" type="text/javascript"></script>
+	<script src="js/jquery.MetaData.js" type="text/javascript" language="javascript"></script> -->
+ 	<script src="js/jquery.rating.js" type="text/javascript" language="javascript"></script>
+	<script src="js/ajaxupload.js" type="text/javascript"></script>
+	
 	<script type="text/javascript">
 	function validNewPassword(){
 		var password = $('#password').val();
@@ -278,6 +281,9 @@
 				this.lastValue= this.value;
 			});
 		});
+		$(function() {
+	        $( "#tabs" ).tabs();
+	    });
 	</script>
 	<% if(searchBean.getLocation() == null) searchBean.autoSetLocation(request); %>
 	<% LocationUtilities locUtils = new LocationUtilities(searchBean.getLocation()); %>
@@ -332,13 +338,13 @@
 		<div id="contentLocation" class="hidden">
 			<div class="accountSettingsAlignFix">
 			Providing your location will allow us to provide location sensitive results, ensuring the best possible experience during your stay at SwapSpace.<br /><br />
-			Location: <input type="text" class="inputBorder" id="newLocation" value="<%=((UserBean)session.getAttribute("user")).getLocation() %>" size="10" maxlength="10"></input> 
+			<%--Location: <input type="text" class="inputBorder" id="newLocation" value="<%=((UserBean)session.getAttribute("user")).getLocation() %>" size="10" maxlength="10"></input> 
 			<% if (searchBean.getLocation()[0] != -1){ 
 			%>
 				<img src="http://maps.google.com/maps/api/staticmap?center=<%= locUtils.getLatitude() %>,<%= locUtils.getLongitude() %>&zoom=12&size=600x250&sensor=false&maptype=roadmap&markers=color:red|label:A|<%= locUtils.getLatitude() %>,<%= locUtils.getLongitude() %>" alt="Your Location"></img>
 			<% } %>
 			<input type="submit" value="Change Location" id="submitLocationChange" onClick="submitChange('location', '#newLocation', '#locationMsg' );"></input>
-			<div id="locationMsg"></div>
+			<div id="locationMsg"></div>--%>
 			</div>
 			<p class="center">
 			<img id="drawerLocation" src="/img/drawer.gif" style="display: inline;"></img>

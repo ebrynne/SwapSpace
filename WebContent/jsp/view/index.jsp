@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Welcome to SwapSpace</title>
 <link href='http://fonts.googleapis.com/css?family=Josefin+Sans+Std+Light' rel='stylesheet' type='text/css'>
-<script src="/jquery.js" type="text/javascript"></script>
+<script src="js/jquery.js" type="text/javascript"></script>
 <link rel="stylesheet" type="text/css" href="css/genericStyles.css"></link>
 </head>
 <body>

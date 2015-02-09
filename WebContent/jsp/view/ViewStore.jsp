@@ -45,13 +45,14 @@
 	<link rel="stylesheet" type="text/css" href="css/ui.tabs.css"></link>
 	<link rel="stylesheet" type="text/css" href="css/myItem.css"></link>
 	<link rel="stylesheet" type="text/css" href="css/pageTab.css"></link>
-	<script src="/jquery.js" type="text/javascript"></script>
-	<script src="/effects.core.js" type="text/javascript"></script>
-	<script src="/ui.core.js" type="text/javascript"></script>
-	<script src="/ui.tabs.js" type="text/javascript"></script>
-	<script src="/commonFunctions.js" type="text/javascript"></script>
-	<script src="/quickpagerdiv.jquery.js" type="text/javascript"></script>
-	<script src="/jquery.MetaData.js" type="text/javascript" language="javascript"></script>
+	<link rel="stylesheet" type="text/css" href="css/storePage.css"></link>
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<script src="js/effects.core.js" type="text/javascript"></script>
+	<script src="js/ui.core.js" type="text/javascript"></script>
+	<script src="js/ui.tabs.js" type="text/javascript"></script>
+	<script src="js/commonFunctions.js" type="text/javascript"></script>
+	<script src="js/quickpagerdiv.jquery.js" type="text/javascript"></script>
+	<script src="js/jquery.MetaData.js" type="text/javascript" language="javascript"></script>
 	<style type="text/css">
 		div.ui-tabs.ui-widget.ui-widget-content.ui-corner-all{
 			padding-bottom:80px;
@@ -158,9 +159,9 @@
 			UserBean storeOwner = (UserBean)request.getAttribute("storeOwner");
 			String ownerImg = "/img/noimage.png";
 			String location = "No location information available";
-			if(storeOwner.getLocation()!= null){
-				if(!storeOwner.getLocation().equals("")) location = storeOwner.getLocation();
-			}
+			//if(storeOwner.getLocation()!= null){
+			//	if(!storeOwner.getLocation().equals("")) location = storeOwner.getLocation();
+			//}
 			if(storeOwner.getImg() != null){
 				if(!storeOwner.getImg().equals("")) ownerImg = "/img/user/"+storeOwner.getImg();
 			}
@@ -169,7 +170,7 @@
 		<br />
 		Read the <a href="/View?pageRequest=viewUserReviews&viewUserId=<%= storeOwner.getId() %>">reviews</a> for this user.
 		<br /><br />
-		<b>Location:&nbsp;&nbsp;&nbsp;</b><%= location %>
+		<b>	:&nbsp;&nbsp;&nbsp;</b><%= location %>
 		<br /><br />
 		<b>Description:&nbsp;&nbsp;&nbsp;</b><%= storeOwner.getDescription() %>
 		<br /><br />
@@ -213,7 +214,7 @@
 		<div id="itemTable" class="pageme" style="width:830px;">
 		<%
 		if(numUserItems != 0){
-			for(int i = 0; i < numUserItems; i++){
+			for(int i = 0; i < userItems.length; i++){
 				Item curItem = userItems[i];
 				String evenOddClass = i%2==0? "evenItem":"oddItem";
 				String imgName ="/img/noimage.png";

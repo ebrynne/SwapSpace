@@ -22,12 +22,14 @@ import ss.dao.DbDao;
  */
 public class ViewServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    private static final String STORE_JSP = "/ViewStore.jsp";
-    private static final String OFFER_MADE_JSP = "/OfferMade.jsp";
-    private static final String HOME_JSP = "/index.jsp";
-    private static final String USER_REVIEW_JSP = "/UserReviews.jsp";
-    private static final String USER_JSP = "/ViewUser.jsp";
-    private static final String MESSAGES_JSP = "/Messages.jsp";
+	
+	private static final String JSP_ROOT = "jsp/view/";
+    private static final String STORE_JSP = JSP_ROOT + "/ViewStore.jsp";
+    private static final String OFFER_MADE_JSP = JSP_ROOT + "/OfferMade.jsp";
+    private static final String HOME_JSP = JSP_ROOT + "index.jsp";
+    private static final String USER_REVIEW_JSP = JSP_ROOT + "/UserReviews.jsp";
+    private static final String USER_JSP = JSP_ROOT + "/ViewUser.jsp";
+    private static final String MESSAGES_JSP = JSP_ROOT + "/Messages.jsp";
     /**
      * @see HttpServlet#HttpServlet()
      */

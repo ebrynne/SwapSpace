@@ -22,6 +22,6 @@
 	<a href="/Controller?pageRequest=logout">Logout</a>
 	
 <% }else{ %>
-	<a id="loginPopup" href="/Login.jsp" title="Login to SwapSpace!">Login</a> or <a href="/Controller?pageRequest=register">Register</a>
+	<a id="loginPopup" href="jsp/view/Login.jsp" title="Login to SwapSpace!">Login</a> or <a href="/Controller?pageRequest=register">Register</a>
 <% } %>
 </body>

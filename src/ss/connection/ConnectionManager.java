@@ -12,7 +12,7 @@ public class ConnectionManager {
 	static TreeMap<String, String[]> dbConns;
 	static {
 		dbConns = new TreeMap<String, String[]>();
-		dbConns.put("mysql", new String [] {"com.mysql.jdbc.Driver", "jdbc:mysql://localhost/ssdb", "root", "E4nPo2Qt"}); 
+		dbConns.put("mysql", new String [] {"com.mysql.jdbc.Driver", "jdbc:mysql://localhost/ssdb", "root", ""}); 
 		dbConns.put("postgres", new String [] {"org.postgresql.Driver", "jdbc:postgresql://localhost/ssdb", "ebrynne", "z03HsmR8"}); 
 	}
 	

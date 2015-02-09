@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="css/genericStyles.css"></link>
 	<link rel="stylesheet" type="text/css" href="css/ui.all.css"></link>
 	<link rel="stylesheet" type="text/css" href="css/myItem.css"></link>
-	<script src="/jquery.js" type="text/javascript"></script>
+	<script src="js/jquery.js" type="text/javascript"></script>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<title>Offer Made</title>
 </head>

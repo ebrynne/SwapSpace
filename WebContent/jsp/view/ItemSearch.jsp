@@ -11,16 +11,15 @@
 	<link rel="stylesheet" type="text/css" href="css/genericStyles.css"></link>
 	<link rel="stylesheet" type="text/css" href="css/ui.all.css"></link>
 	<link rel="stylesheet" type="text/css" href="css/myItem.css"></link>
-	<script src="/jquery.js" type="text/javascript"></script>
-	<script src="/effects.core.js" type="text/javascript"></script>
-	<script src="/ui.core.js" type="text/javascript"></script>
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<script src="js/effects.core.js" type="text/javascript"></script>
+	<script src="js/ui.core.js" type="text/javascript"></script>
 	<jsp:useBean id="searchBean" scope="session" class="ss.beans.SearchBean"></jsp:useBean>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<title>Search Swap Space - Items</title>
 </head>
 <body>
-	<% if(searchBean.getLocation() == null) searchBean.autoSetLocation(request); %>
-	<% LocationUtilities locUtils = new LocationUtilities(searchBean.getLocation()); %>
+	<% //LocationUtilities locUtils = new LocationUtilities(searchBean.getLocation()); %>
 	<jsp:include page="TopBar.jsp"></jsp:include>
 	<div class="centerDiv">
 		<h2>Search: "<%= request.getParameter("search") %>"</h2>
@@ -29,10 +28,10 @@
 		<table id="itemTable" class="pageme">
 		<tbody class="mainBody">
 		<tr>
-			<% if (searchBean.getLocation()[0] != -1){ 
+			<% if(false){//(searchBean.getLocation()[0] != -1){ 
 			%>
 			<td>
-				<img src="http://maps.google.com/maps/api/staticmap?center=<%= locUtils.getLatitude() %>,<%= locUtils.getLongitude() %>&zoom=12&size=600x250&sensor=false&maptype=roadmap&markers=color:red|label:A|<%= locUtils.getLatitude() %>,<%= locUtils.getLongitude() %>" alt="Your Location"></img>
+				<img src="http://maps.google.com/maps/api/staticmap?center=locUtils.getLatitude(),locUtils.getLongitude()&zoom=12&size=600x250&sensor=false&maptype=roadmap&markers=color:red|label:A|locUtils.getLatitude(),locUtils.getLongitude()" alt="Your Location"></img>
 			</td>
 			<% } %>
 		</tr>
@@ -41,7 +40,7 @@
 		String searchType = request.getParameter("type") == null ? "item" : request.getParameter("type");
 		String query= request.getParameter("search");
 		String category = request.getParameter("category");
-		String location = request.getParameter("location");
+		//String location = request.getParameter("location");
 		String rangeString = request.getParameter("range") == null ? "-1" : request.getParameter("range");
 		int range = 0;
 		try{

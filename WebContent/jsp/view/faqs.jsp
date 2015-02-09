@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Frequently Asked Questions</title>
-<script src="/jquery.js" type="text/javascript"></script>
+<script src="js/jquery.js" type="text/javascript"></script>
 <link rel="stylesheet" type="text/css" href="css/genericStyles.css"></link>
 </head>
 <body>

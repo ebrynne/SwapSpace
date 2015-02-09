@@ -7,10 +7,10 @@
 	<%@ page import="ss.beans.ConversationBean"%>
 	<link rel="stylesheet" type="text/css" href="css/genericStyles.css"></link>
 	<link rel="stylesheet" type="text/css" href="css/ui.all.css"></link>
-	<script src="/jquery.js" type="text/javascript"></script>
-	<script src="/effects.core.js" type="text/javascript"></script>
-	<script src="/ui.core.js" type="text/javascript"></script>
-	<script src="/quickpagerdiv.jquery.js" type="text/javascript"></script>
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<script src="js/effects.core.js" type="text/javascript"></script>
+	<script src="js/ui.core.js" type="text/javascript"></script>
+	<script src="js/quickpagerdiv.jquery.js" type="text/javascript"></script>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<%
 	

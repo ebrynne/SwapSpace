@@ -6,7 +6,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<title>Sign Up for Swap Space! </title>
 	<link rel="stylesheet" type="text/css" href="css/genericStyles.css"></link>
-	<script src="/jquery.js" type="text/javascript"></script>
+	<script src="js/jquery.js" type="text/javascript"></script>
 	<script type="text/javascript">
 
 		function readySubmit(){
@@ -197,7 +197,7 @@
 			<td><i>While this is not required, it allows us to provide you with location sensitive results.</i></td>
 		</tr> -->
 		<tr>
-			<td colspan="3">By checking this checkbox, I agree to the <a href="/TermsConds.jsp" id="aTermsCond">terms and conditions of service.</a>&nbsp;&nbsp;&nbsp; <input id="termCond" onClick="readySubmit();" type="checkbox"></input></td>
+			<td colspan="3">By checking this checkbox, I agree to the <a href="jsp/view/TermsConds.jsp" id="aTermsCond">terms and conditions of service.</a>&nbsp;&nbsp;&nbsp; <input id="termCond" onClick="readySubmit();" type="checkbox"></input></td>
 		</tr>
 		<tr >
 			<td><input type="submit" id="regSubmit" value="Register"></td>

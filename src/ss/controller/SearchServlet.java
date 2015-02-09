@@ -17,7 +17,9 @@ import ss.dao.DbDao;
  */
 public class SearchServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    private static final String CONVERSATIONS_JSP = "/Conversations.jsp";
+	private static final String JSP_ROOT = "jsp/view/";
+
+    private static final String CONVERSATIONS_JSP = JSP_ROOT + "/Conversations.jsp";
 
     /**
      * @see HttpServlet#HttpServlet()
@@ -43,10 +45,10 @@ public class SearchServlet extends HttpServlet {
 		if(searchType != null){
 			if(searchType.equals("user")){
 				if(request.getParameter("locationRange")!=null) request.setAttribute("locationRange",request.getParameter("locationRange"));
-				forward="/UserSearch.jsp";
+				forward=JSP_ROOT + "/UserSearch.jsp";
 			}else if(searchType.equals("item")){
 				if(request.getParameter("locationRange")!=null) request.setAttribute("locationRange",request.getParameter("locationRange"));
-				forward="/ItemSearch.jsp";
+				forward=JSP_ROOT + "/ItemSearch.jsp";
 				
 			}else if(searchType.equals("conversations")){
 				if(user != null){
@@ -55,11 +57,11 @@ public class SearchServlet extends HttpServlet {
 					request.setAttribute("conversations", convs);
 					forward=CONVERSATIONS_JSP;
 				}else{
-					forward="/index.jsp";
+					forward=JSP_ROOT + "/index.jsp";
 				}
 			}
 		}else{
-			forward="/index.jsp";
+			forward=JSP_ROOT + "/index.jsp";
 		}
 		RequestDispatcher view = request.getRequestDispatcher(forward);
 		view.forward(request, response);

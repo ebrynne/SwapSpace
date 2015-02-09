@@ -1,8 +1,8 @@
 <head>
 	<link rel="shortcut icon" href="/img/favicon.ico" >
 	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css"></link>
-	<script src="/jquery.fancybox.js" type="text/javascript"></script>
-	<script src="/quickpagerdiv.jquery.js"></script>
+	<script src="js/jquery.fancybox.js" type="text/javascript"></script>
+	<script src="js/quickpagerdiv.jquery.js"></script>
 	<script type="text/javascript">
 	$(document).ready(function() { 
 		

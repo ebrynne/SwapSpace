@@ -86,8 +86,8 @@ public class DbDao {
 	private final String GET_LAT_LONG_BY_IP = "SELECT latitude, longitude FROM ipLocations WHERE ipStart = (SELECT MAX(ipStart) FROM ipLocations WHERE ipStart < ?) AND ipEnd = (select MIN(ipEnd) FROM ipLocations WHERE ipEnd > ?)";
 	private final String GET_NEWS = "SELECT news from siteNews ORDER BY createdAt LIMIT 1";
 	private final String GET_NOTES = "SELECT authorId, username, content FROM notes, users WHERE notes.userId=? AND notes.authorId=users.userId order by notes.createdAt DESC LIMIT 100";
-	private final String GET_USER = "SELECT username, guid, email, userId, imgName, active, password, location, description, lookingFor, rating FROM users WHERE email=?";
-	private final String GET_USER_BY_ID = "SELECT username, email, guid, userId, imgName, active, location, description, lookingFor, rating FROM users WHERE userId=?";
+	private final String GET_USER = "SELECT username, email, userId, imgName, active, password, location, description, lookingFor, rating FROM users WHERE email=?";
+	private final String GET_USER_BY_ID = "SELECT username, email, userId, imgName, active, location, description, lookingFor, rating FROM users WHERE userId=?";
 	private final String GET_ITEM_BY_ID = "SELECT * FROM items WHERE itemId=?";
 	private final String GET_ITEMS_FOR_USER = "SELECT * from items WHERE ownerId=? AND items.status!='swapped' order by createdAt DESC";
 	private final String GET_SWAPS_ITEMS_FOR_USERS = "SELECT swaps.finalized, swaps.swapId, userSwaps.dirty, users.username, users.userId, userSwaps.lastModified, userSwaps.status, items.name, items.description, items.imgName, items.category, items.status, items.itemId, items.ownerId FROM users, ((userSwaps inner join swaps on userSwaps.swapId = swaps.swapId) inner join swapItems on swaps.swapId = swapItems.swapId) inner join items on swapItems.itemId = items.itemId WHERE userSwaps.userId = ? AND users.userId=userSwaps.otherUser order by lastModified desc;";
@@ -145,6 +145,7 @@ public class DbDao {
 	private final String IS_NEW_CONVERSATION = "SELECT conversationId FROM conversations WHERE swapId=?";
 		
 	//TODO: Break up? Nope! 
+	// ... Yup.
 	Connection conn;
 	ConnectionManager cm;
 	
@@ -182,7 +183,7 @@ public class DbDao {
 					 usr.setActive(rs.getString("active"));
 					 usr.setName(rs.getString("username"));
 					 usr.setImg(rs.getString("imgName"));
-					 usr.setGuid(rs.getString("guid"));
+					 //usr.setGuid(rs.getString("guid"));
 					 if(rs.getString("description")!=null)
 					 	usr.setDescription(rs.getString("description"));
 					 if(rs.getString("lookingFor") != null)
@@ -238,7 +239,7 @@ public class DbDao {
 				 usr.setActive(rs.getString("active"));
 				 usr.setName(rs.getString("username"));
 				 usr.setImg(rs.getString("imgName"));
-				 usr.setGuid(rs.getString("guid"));
+				 //usr.setGuid(rs.getString("guid"));
 				 if(rs.getString("description")!=null)
 				 	usr.setDescription(rs.getString("description"));
 				 if(rs.getString("lookingFor") != null)
@@ -585,7 +586,7 @@ public class DbDao {
 			ps.setInt(5, index+50);
 			
 			//TODO: UNFIXED EDGE CASE: On the first block of any row, the end blocks of the above row are returned as the blocks on the same row to the left;
-			if(range > 0 && range <101){
+			/**if(range > 0 && range <101){
 				int horizontalOffset = location[0] - blockRows.lowerEntry(nextLatRow).getValue().intValue()-1;
 				Double [] rowSet = {blockRows.lowerEntry(nextLatRow).getKey(),nextLatRow,blockRows.higherEntry(nextLatRow) == null ? new Double(-1): blockRows.higherEntry(nextLatRow).getKey()};
 				for(int i = 0; i< 9; i++){
@@ -603,7 +604,7 @@ public class DbDao {
 				ps.setInt(32, range);
 			}else{
 				
-			}
+			}**/
 			rs = ps.executeQuery();
 			while(rs.next()){
 				if(searchType.equals("user")){
@@ -634,9 +635,11 @@ public class DbDao {
 		}
 		ResultObject[] roArray = new ResultObject[results.size()];
 		for(int i = 0; i< results.size(); i++){
-			roArray[i] = results.get(i);
+			ResultObject a = results.get(i);
+			System.out.println(a);
+			roArray[i] = a;
 		}
-		
+		System.out.println(roArray);
 		return roArray;
 	}
 
